@@ -2,7 +2,7 @@
   <div
     id="lineChart"
     class="chart"
-    style="height:300px;width:500px"
+    style="height:300px;width:430px"
   ></div>
 </template>
 <script>
