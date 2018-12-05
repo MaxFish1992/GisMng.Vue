@@ -42,13 +42,14 @@
         <div class="formGroup">
           <el-form-item
             label="账号"
-            prop="user"
+            prop="username"
           >
             <el-input
               type="text"
               auto-complete="off"
               placeholder="请输入您的账号"
               class="form-control"
+              v-model="username"
             ></el-input>
           </el-form-item>
           <el-form-item
@@ -61,6 +62,7 @@
               auto-complete="off"
               placeholder="请输入密码"
               class="form-control"
+              v-model="password"
             ></el-input>
           </el-form-item>
         </div>
@@ -127,6 +129,8 @@ export default {
   methods: {
       login(){
           this.$router.push('/Home');
+          console.log(this.username);
+          console.log(this.password);
       }
   }
 };
@@ -158,7 +162,7 @@ label {
 }
 .remember {
   width: 250px;
-  text-align: left;
+  text-align: center;
 }
 .forget {
   width: 500px;
@@ -169,6 +173,7 @@ label {
 .remFor {
   margin-bottom: 10px;
   padding-bottom: 10px;
+  text-align: center;
 }
 .tabsUser {
   display: inline-block;
